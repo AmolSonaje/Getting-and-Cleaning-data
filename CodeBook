@@ -85,3 +85,28 @@ The tidy data contains 6 rows (averaged based on activity) and 68 columns (66 va
 "fBodyBodyGyroJerkMag-std()"
 variable units
 Activity variable is factor type. Subject variable is integer type. All the other variables are numeric type.
+
+Code Summary:
+Variables: (reading data)
+1. X_train: Data from X train file
+2. Y_train: Data from Y train file
+3. Sub_train: Subject train data
+4. X_test: Data from X test file
+5. Y_test: Data from Y test file
+6. Sub_train: Subject test data
+7. variable_names: features file data
+8. activity_labels: activity_lables file data
+
+
+Calculated Variables and step wise explanations: 
+1. X_total: Total of X data set
+2. Y_total: Total of Y data set
+3. Sub_total: Total of subject data set 
+4. selected_var: Extracts only the measurements on the mean and standard deviation for each measurement
+5. Next step is to apply this to X_total
+6. Uses descriptive activity names to name the activities in the data set i.e. create Y_total$activitylabel
+7. Appropriately labels the data set with descriptive variable names
+8. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+9. total: Is the table of combination of X_total, activitylabel, Sub_total
+10. total_mean: Groupby of activitylable with respect to subject further summarised by mean
+11. Write this to the tidy data output
